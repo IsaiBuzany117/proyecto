@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/IsaiBuzany117/proyecto/issues"
   },
-  "homepage": "https://github.com/IsaiBuzany117/proyecto#readme"
+  "homepage": "https://github.com/IsaiBuzany117/proyecto#readme",
+  "devDependencies": {
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0"
+  }
 }
