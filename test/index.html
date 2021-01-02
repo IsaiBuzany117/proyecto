@@ -8,57 +8,64 @@
 </head>
 
     <style type="text/css">
-    #global {
-        height: 100px;
-        width: 200px;
-        border: 1px solid #ddd;
-        background: #f1f1f1;
-        overflow-y: scroll;
-    }
-    #mensajes {
-        height: auto;
-    }
-    .texto {
-        padding:4px;
-        background:#fff;
-    }
+    select {
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        -ms-appearance:none;
+        appearance:none;
+        
+        outline:0;
+        box-shadow:none;
+        border:0!important;
+        background: #5c6664;
+        background-image: none;
+        flex: 1;
+        padding: 0 .5em;
+        color:#fff;
+        cursor:pointer;
+        font-size: 0.8em;
+        font-family: 'Open Sans', sans-serif;
+        }
+        select::-ms-expand {
+        display: none;
+        }
+        .select {
+        position: relative;
+        display: flex;
+        width: 15em;
+        height: 3em;
+        line-height: 3;
+        background: white;
+        overflow: hidden;
+        border-radius: .25em;
+        }
+        .select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background: #879292;
+        cursor:pointer;
+        pointer-events:none;
+        transition:.25s all ease;
+        }
+        .select:hover::after {
+        color: #1024d8;
+        }
     </style>
 
 <body>
-    
-    <div id="global">
-        <div id="mensajes">
-            <div class="texto">Mensaje 1</div>
-            <div class="texto">Mensaje 2</div>
-            <div class="texto">Mensaje 3</div>
-            <div class="texto">Mensaje 4</div>
-            <div class="texto">Mensaje 5</div>
-            <div class="texto">Mensaje 6</div>
-            <div class="texto">Mensaje 7</div>
-            <div class="texto">Mensaje 8</div>
-            <div class="texto">Mensaje 9</div>
-            <div class="texto">Mensaje 10</div>
-            <div class="texto">Mensaje 11</div>
-            <div class="texto">Mensaje 12</div>
-            <div class="texto">Mensaje 13</div>
-            <div class="texto">Mensaje 14</div>
-            <div class="texto">Mensaje 15</div>
-        </div>
-    </div>
-
-    <div class="card border-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Header</div>
-        <div class="card-body text-primary">
-          <h5 class="card-title">Primary card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-    </div>
-
-    <p>Este es un parrafo unicamente visual para ver el uso de
-        la etiqueta hr</p>
-         <hr/>
-         <p>Este es el segundo parrafo, separado del primero por la etiqueta hr, que puede
-       representarse mediante una línea horizontal.</p>
+    <div class="select">
+        <select name="format" id="format">
+           <option selected disabled>Choose a book format</option>
+           <option value="pdf">PDF</option>
+           <option value="txt">txt</option>
+           <option value="epub">ePub</option>
+           <option value="fb2">fb2</option>
+           <option value="mobi">mobi</option>
+        </select>
+     </div>
 
 </body>
 </html>

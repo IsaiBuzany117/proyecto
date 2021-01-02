@@ -4,6 +4,9 @@ import Card from './Card';
 import Builder from './Builder';
 import Ejercicio from './Ejercicio';
 import '../css/crearStyles.css';
+import Pattern from '../img/1.jpg';
+import Numbers from '../img/numbers (3).png';
+import Equations from '../img/equations.png';
 
 class Crear extends React.Component {
 
@@ -40,9 +43,9 @@ class Crear extends React.Component {
                     </Board>   
                 </div>    
                 <footer className="flexbox-ej">
-                    <Ejercicio></Ejercicio>
-                    <Ejercicio></Ejercicio>
-                    <Ejercicio></Ejercicio>
+                    <Ejercicio img={Pattern} title="Patrones" className="border"></Ejercicio>
+                    <Ejercicio img={Numbers} title="Numeros" className="border"></Ejercicio>
+                    <Ejercicio img={Equations} title="Ecuaciones" className="border"></Ejercicio>
                 </footer>
             </div>
         )

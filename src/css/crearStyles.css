@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1320px;
     height: 520px;
     overflow: hidden;
     margin: 0 auto;
@@ -35,7 +35,7 @@
 .builder {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 680px;
     /* max-width: 300px; */
     background-color: black;
     padding: 15px 25px;
@@ -65,6 +65,12 @@
 .color {
     background-color: darkslateblue;
 }
+.border{
+    border-style: solid;
+    border-width: 2px;
+    border-color: 660033;
+    background-color: cc3366;
+}
 .border-dot {
     border-style: dashed;
     border-width: 2px;
@@ -77,18 +83,77 @@
     overflow: hidden;
     margin: 0 auto;
     padding: 15px;
-    height: 100px;
-    background-color: coral;
+    height: 135px;
+    background-color: grey;
     width: 100%;
     max-width: 400px;
 }
 .ejercicios {
     padding: 15px 55px;
-    background-color: white;
+    background-color: rgb(133, 131, 235);
     cursor: pointer;
+    height: 72px;
+    max-width: 100px;
     margin-bottom: 15px;
 }
 .image{
-    background: url('../img/1.jpg') no-repeat;
-    
+    /* background: url('../img/1.jpg') no-repeat; */
+    width: 50px;
+    align: center;
+}
+.acciones {
+    display: flex;
+    justify-content: space-between;
+}
+.caja{
+    display: flex;
+    justify-content: space-around;
+
+}
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;    
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background: #5c6664;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color:#fff;
+    cursor:pointer;
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+    display: none;
+}
+.select {
+    position: relative;
+    display: flex;
+    width: 11.5em;
+    height: 3em;
+    line-height: 3;
+    background: white;
+    overflow: hidden;
+    border-radius: .25em;
+}
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #879292;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+}
+.select:hover::after {
+    color: #1024d8;
+}
+.title-type {
+    text-align: center;
 }

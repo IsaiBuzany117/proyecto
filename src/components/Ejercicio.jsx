@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import '../css/crearStyles.css';
-import I from '../img/1.jpg';
 
 export default class Ejercicio extends Component {
     render() {
+
         return (
-            <div className="ejercicios image">
+            <div>
+                <div className={`ejercicios ${this.props.className}`}
+                style={{
+                    backgroundImage: `url(${this.props.img})`,
+                    
+                }}
+                >
+                </div>
+                <div className="title-type">
+                    <label className="text-warning">{this.props.title}</label>
+                </div>
                 
-                {/* <img src={I} alt=""/> */}
-            </div>            
-        )
+            </div>
+            
+        )   
     }
 }
