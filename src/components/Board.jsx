@@ -11,16 +11,19 @@ class Board extends React.Component {
 
     handleDrop (evt) {
         evt.preventDefault();
+        
         const card_id = evt.dataTransfer.getData('card_id');
 
         const card = document.getElementById(card_id);
         card.style.display = 'block';
 
         evt.target.appendChild(card);
+        
     }   
 
     handleDragOver (evt) {
         evt.preventDefault();
+        
     }
 
     render() {

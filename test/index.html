@@ -8,64 +8,35 @@
 </head>
 
     <style type="text/css">
-    select {
-        -webkit-appearance:none;
-        -moz-appearance:none;
-        -ms-appearance:none;
-        appearance:none;
-        
-        outline:0;
-        box-shadow:none;
-        border:0!important;
-        background: #5c6664;
-        background-image: none;
-        flex: 1;
-        padding: 0 .5em;
-        color:#fff;
-        cursor:pointer;
-        font-size: 0.8em;
-        font-family: 'Open Sans', sans-serif;
+        .upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
         }
-        select::-ms-expand {
-        display: none;
+        .btn {
+            border: 2px solid gray;
+            color: gray;
+            background-color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
         }
-        .select {
-        position: relative;
-        display: flex;
-        width: 15em;
-        height: 3em;
-        line-height: 3;
-        background: white;
-        overflow: hidden;
-        border-radius: .25em;
-        }
-        .select::after {
-        content: '\25BC';
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0 1em;
-        background: #879292;
-        cursor:pointer;
-        pointer-events:none;
-        transition:.25s all ease;
-        }
-        .select:hover::after {
-        color: #1024d8;
+        .upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
         }
     </style>
 
 <body>
-    <div class="select">
-        <select name="format" id="format">
-           <option selected disabled>Choose a book format</option>
-           <option value="pdf">PDF</option>
-           <option value="txt">txt</option>
-           <option value="epub">ePub</option>
-           <option value="fb2">fb2</option>
-           <option value="mobi">mobi</option>
-        </select>
-     </div>
 
+    <div class="upload-btn-wrapper">
+        <button class="btn">Upload a file</button>
+        <input type="file" name="myfile" />
+    </div>
+     
 </body>
 </html>
