@@ -3,6 +3,7 @@ import Card from './Card';
 import Operaciones from './Operaciones';
 import Resultado from './Resultado';
 import '../css/crearStyles.css';
+import '../css/imgfiles.css';
 
 export default class Builder extends Component {
     
@@ -34,7 +35,11 @@ export default class Builder extends Component {
 
         const card = document.getElementById(card_id);
         card.style.display = 'block';
-
+        
+        if(card.nodeName == "IMG"){
+            card.classList.add("img-card");
+            
+        }
         evt.target.appendChild(card);
 
         const suma1 = document.getElementById("suma");

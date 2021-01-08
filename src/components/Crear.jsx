@@ -4,9 +4,12 @@ import Card from './Card';
 import Builder from './Builder';
 import Ejercicio from './Ejercicio';
 import '../css/crearStyles.css';
+import '../css/crearButton.css'
+import '../css/imgfiles.css';
 import Pattern from '../img/1.jpg';
 import Numbers from '../img/numbers (3).png';
 import Equations from '../img/equations.png';
+import CrearButton from './CrearButton';
 
 class Crear extends React.Component {
 
@@ -17,35 +20,34 @@ class Crear extends React.Component {
             tipo: 'Numeros'
         }
         this.handleClick = this.handleClick.bind(this);
+        this.handleChangeImg = this.handleChangeImg.bind(this);
     }
 
+    handleChangeImg (evt) {
+        if(evt.target.files.length > 0){
+            let src = URL.createObjectURL(evt.target.files[0]);
+            let preview;
+            if(evt.target.id == "file-1"){
+                preview = document.getElementById("file-1-img");
+            } else if(evt.target.id == "file-2"){
+                preview = document.getElementById("file-2-img");
+            } else if(evt.target.id == "file-3"){
+                preview = document.getElementById("file-3-img");
+            } else if(evt.target.id == "file-4"){
+                preview = document.getElementById("file-4-img");
+            }
+            // let preview = document.getElementById("file-1-img");
+            preview.src = src;
+            preview.style.display = "block";
+
+        }
+    }
     handleClick(evt){
         const board = document.getElementById("board1");
         this.setState({
             tipo: evt.target.id
         })
         console.log(this.state.tipo);
-        // const board = document.getElementById("board1");
-        // switch(evt.target.id){
-        //     case "Patrones":
-        //         console.log("Patronesssss");
-        //         console.log(board.firstChild.firstChild);
-        //         const h1 = document.createElement("h1");
-        //         h1.textContent = "A";
-        //         board.firstChild.firstChild.replaceWith(h1);
-        //         // board.replaceWith(board.firstChild.firstChild, h1;
-        //     break;
-        //     case "Ecuaciones":
-                
-        //         console.log(board.lastChild);
-        //         board.lastChild.firstChild.textContent="X";
-        //     break;
-        //     case "Numeros":
-        //         for(let i = 0; i < board.childNodes.length; i++){
-        //             board.childNodes[i].firstChild
-        //         }
-        //     break;
-        // }
     }
     render() {
         const boardContent = () => {
@@ -139,18 +141,50 @@ class Crear extends React.Component {
                 return(
                     <Board id="board1" className="board">
                         <Card id="card1" className="card" draggable="true">
-                            <input type="file" name="img1" id="img1" className="text-center"/>
+                            <div className="center">
+                                <div className="form-input">
+                                    <label htmlFor="file-1">Cargar imagen</label>
+                                    <input type="file" id="file-1" accept="image/*" onChange={this.handleChangeImg}/>
+                                    <div className="preview">
+                                        <img id="file-1-img"/>
+                                    </div>
+                                </div>
+                            </div>
                             
                         </Card>
                         <Card id="card2" className="card" draggable="true">
-                            <h4 className="text-center h1 font-we">-3</h4>
+                            <div className="center">
+                                <div className="form-input">
+                                    <label htmlFor="file-2">Cargar imagen</label>
+                                    <input type="file" id="file-2" accept="image/*" onChange={this.handleChangeImg}/>
+                                    <div className="preview">
+                                        <img id="file-2-img"/>
+                                    </div>
+                                </div>
+                            </div>
                             
                         </Card>
                         <Card id="card3" className="card" draggable="true">
-                            <h4 className="text-center h1 font-we">-2</h4>
+                            <div className="center">
+                                <div className="form-input">
+                                    <label htmlFor="file-3">Cargar imagen</label>
+                                    <input type="file" id="file-3" accept="image/*" onChange={this.handleChangeImg}/>
+                                    <div className="preview">
+                                        <img id="file-3-img"/>
+                                    </div>
+                                </div>
+                            </div>
                         </Card>
                         <Card id="card4" className="card" draggable="true">
-                            <h4 className="text-center h1 font-we">-1</h4>
+                            <div className="center">
+                                <div className="form-input">
+                                    <label htmlFor="file-4">Cargar imagen</label>
+                                    <input type="file" id="file-4" accept="image/*" onChange={this.handleChangeImg}/>
+                                    <div className="preview">
+                                        <img id="file-4-img"/>
+                                    </div>  
+                                </div>
+                            </div>
                         </Card>
                     </Board>
                 )
@@ -173,11 +207,14 @@ class Crear extends React.Component {
                         
                     </Board>   
                 </div>    
-                <footer className="flexbox-ej">
-                    <Ejercicio id="Patrones" img={Pattern} title="Patrones" className="border" onClick={this.handleClick}></Ejercicio>
-                    <Ejercicio id="Numeros" img={Numbers} title="Numeros" className="border" onClick={this.handleClick}></Ejercicio>
-                    <Ejercicio id="Ecuaciones" img={Equations} title="Ecuaciones" className="border" onClick={this.handleClick}></Ejercicio>
-                </footer>
+                <div className="pr row">
+                    <div className="flexbox-ej">
+                        <Ejercicio id="Patrones" img={Pattern} title="Patrones" className="border" onClick={this.handleClick}></Ejercicio>
+                        <Ejercicio id="Numeros" img={Numbers} title="Numeros" className="border" onClick={this.handleClick}></Ejercicio>
+                        <Ejercicio id="Ecuaciones" img={Equations} title="Ecuaciones" className="border" onClick={this.handleClick}></Ejercicio>
+                    </div>
+                    <CrearButton></CrearButton>
+                </div>
                 
             </div>
         )

@@ -1,0 +1,18 @@
+td{
+    width: 400px;
+}
+.acciones {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+.link {   
+    margin-right: 10px;
+}
+.link .text {
+    font-size: 20px;
+}
+.name-text{
+    font-size: 20px;
+}

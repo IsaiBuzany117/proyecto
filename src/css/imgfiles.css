@@ -1,0 +1,17 @@
+/* .center {
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.form-input {
+    width:250px;
+    padding:20px;
+    background:#000;
+    border:2px dashed #555;
+} */
+.img-card {
+    width:100%;
+    /* display:none; */
+    margin-top:10px;
+}

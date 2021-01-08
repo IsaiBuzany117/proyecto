@@ -1,4 +1,5 @@
 import React from 'react';
+import Erow from './ERow';
 import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
@@ -17,7 +18,9 @@ class Home extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                
+                        <Erow nombre="Ejercicio 1"></Erow>
+                        <Erow nombre="Patrones 1"></Erow>
+                        <Erow nombre="Numeros 1"></Erow>
                     </tbody>
                 </table>
             </div>
