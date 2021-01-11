@@ -11,15 +11,16 @@ class App extends React.Component {
 
     render(){
         return(
-            <BrowserRouter>
+            <BrowserRouter basename={"/test"}>
                 <Switch>
                     <Route exact path="/" component={Login}></Route>
                     <Route exact path="/home" component={Home}></Route>
                     <Route exact path="/crear" component={Crear}></Route>
                     <Route exact path="/eliminar/:nombre" component={Eliminar}></Route>
-                    <Route component={NotFound}></Route>
+                    {/* <Route component={NotFound}></Route> */}
                 </Switch>
             </BrowserRouter>
+            // <h1>Hello wordl from ReactJs</h1>
         )
     }
 }

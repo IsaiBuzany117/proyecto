@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/IsaiBuzany117/proyecto/issues"
   },
-  "homepage": "https://github.com/IsaiBuzany117/proyecto#readme",
+  "homepage":"http://localhost:8080/test",
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",

@@ -6,7 +6,7 @@ export default class CrearButton extends Component {
     render() {
         return (
             <div className="asd">
-                <Link to="/home"><a class="myButton">Crear Ejercicio</a></Link>
+                <Link to="/CrearServlet"><a class="myButton">Crear Ejercicio</a></Link>
             </div>
         )
     }
