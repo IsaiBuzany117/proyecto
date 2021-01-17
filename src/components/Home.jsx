@@ -1,8 +1,29 @@
 import React from 'react';
 import Erow from './ERow';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
+
+    constructor (){
+        super();
+        this.state = {
+
+        }
+        this.handleAxios = this.handleAxios.bind(this);
+        this.handleAxios();
+    }
+
+    handleAxios () {
+        let url = `https://jsonplaceholder.typicode.com/users`;
+        axios.get(url)
+        .then(response => {
+            console.log(response);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
 
     render() {
         return(
