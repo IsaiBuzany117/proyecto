@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/IsaiBuzany117/proyecto/issues"
   },
-  "homepage":"http://localhost:8080/test",
+  "homepage": "http://localhost:8080/test",
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.12.10",
+    "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
     "bootstrap": "^4.5.3",
     "css-loader": "^5.0.1",
