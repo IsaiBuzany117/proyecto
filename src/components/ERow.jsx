@@ -18,7 +18,9 @@ export default class ERow extends Component {
                     <div className="link">
                         <Link to={`/eliminar/${this.props.nombre}`}><span class="badge badge-pill badge-danger text">Eliminar</span></Link>
                     </div>    
-
+                    <div className="link">
+                        <Link to={`/probar`}><span class="badge badge-pill badge-info text">Probar</span></Link>
+                    </div>
                     {/* <a href="./leerPregunta.html" onClick={this.handleSubmit}>Leer Pregunta</a>
                     <span>  ||  </span>
                     <a href="./modificarPregunta.html">Modificar Pregunta</a>
