@@ -6,7 +6,7 @@ export default class ERow extends Component {
     render() {
         return (
             <tr>
-                <td scope="row" className="name-text">1</td>
+                <td scope="row" className="name-text">{this.props.id}</td>
                 <td className="name-text">{this.props.nombre}</td>
                 <td className="acciones">
                     <div className="link">
