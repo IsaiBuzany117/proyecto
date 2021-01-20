@@ -13,10 +13,7 @@ class Eliminar extends Component {
     }
 
     handleAxios(){
-        console.log("asdas");
-        console.log(this.props.match.params.nombre);
-        let url =`http://localhost:8080/test/EliminarServlet?nombre=${this.props.match.params.nombre}`;
-        console.log("qweqw");
+        let url =`http://localhost:8080/Proyecto/EliminarServlet?nombre=${this.props.match.params.nombre}`;
         axios.get(url)
         .catch(err => {
             console.log(err);

@@ -6,7 +6,7 @@ export default class CrearButton extends Component {
     render() {
         return (
             <div className="asd">
-                <Link to="/CrearServlet"><a class="myButton">Crear Ejercicio</a></Link>
+                <input type="submit" className="myButton" value="Crear Ejercicio" onClick={this.props.click}></input>
             </div>
         )
     }

@@ -21,12 +21,13 @@ class Card extends React.Component {
         return(
 
             <div
+                key={this.props.k}
                 id = {this.props.id}
                 className = {this.props.className}
                 draggable = {this.props.draggable}
                 onDragStart = {this.handleDragStart}
                 onDragOver = {this.handleDragOver}
-
+                
             >                
                 {this.props.children}
             </div>

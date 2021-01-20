@@ -16,7 +16,7 @@ class Home extends React.Component {
 
     handleAxios () {
         // let url = `https://jsonplaceholder.typicode.com/users`;
-        let url =`http://localhost:8080/test/LeerServlet`
+        let url =`http://localhost:8080/Proyecto/LeerServlet`
         axios.get(url)
         .then(response => {
             console.log(response.data);
@@ -35,7 +35,7 @@ class Home extends React.Component {
 
         const todosejercicios = this.state.ejercicios.map((ejercicio, i) => {
             return(
-                <Erow nombre={ejercicio.nombre} id={i}></Erow>
+                <Erow nombre={ejercicio.nombre} id={i+1}></Erow>
             )
         })
 

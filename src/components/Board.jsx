@@ -18,6 +18,8 @@ class Board extends React.Component {
         card.style.display = 'block';
 
         evt.target.appendChild(card);
+        evt.target.appendChild(card);
+        evt.target.appendChild(card);
         
     }   
 

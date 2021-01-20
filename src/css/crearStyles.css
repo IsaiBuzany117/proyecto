@@ -6,7 +6,8 @@
     height: 10px;
 }
 .dark{
-    background-color: #5c6664;
+    background-color: #0ca707b9;
+    align-items: center;
     display: flex;
     flex-direction: column;
     padding: 15px 25px;
@@ -21,14 +22,14 @@
     overflow: hidden;
     margin: 0 auto;
     padding: 15px;
-    background-color: aqua;
+    background-color: #fff8dc;
 }
 .flexbox .board {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 220px;
-    background-color: gray;
+    background-color: white;
     padding: 15px;   
     overflow-y: auto; 
 }
@@ -71,19 +72,20 @@
     height: 130px;
 }
 .color {
-    background-color: darkslateblue;
+    background-color: rgba(60, 42, 175, 0.733);
 }
 .border{
     border-style: solid;
     border-width: 2px;
     border-color: 660033;
-    background-color: cc3366;
+    background-color:black;
 }
 .border-dot {
-    border-style: dashed;
+    border-style:dashed;
     border-width: 2px;
-    border-color: 660033;
-    background-color: cc3366;
+    color:white;
+    border-color:rgba(83, 63, 212, 0.733);
+    background-color: rgba(61, 36, 224, 0.733);
 }
 .flexbox-ej {
     display: flex;
@@ -92,7 +94,7 @@
     /* margin: 0 auto; */
     padding: 15px;
     height: 135px;
-    background-color: grey;
+    background-color:white;
     width: 400px;
     /* max-width: 400px; */
 }
@@ -126,7 +128,7 @@ select {
     outline:0;
     box-shadow:none;
     border:0!important;
-    background: #5c6664;
+    background: #e6a224;
     background-image: none;
     flex: 1;
     padding: 0 .5em;
@@ -147,8 +149,6 @@ select::-ms-expand {
     background: white;
     overflow: hidden;
     border-radius: .25em;
-    
-    
 }
 .select::after {
     content: '\25BC';
@@ -166,6 +166,7 @@ select::-ms-expand {
 }
 .title-type {
     text-align: center;
+    color: black;
 }
 .op {
     font-size: 14px;
@@ -210,5 +211,6 @@ select::-ms-expand {
 .pr {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     /* background-color: teal; */
 }
